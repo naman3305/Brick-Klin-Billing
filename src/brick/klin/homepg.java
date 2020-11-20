@@ -3,7 +3,8 @@ import java.awt.event.*;
 import javax.swing.*;
 
 
-public class homepg extends JFrame implements ActionListener{
+public class homepg extends JFrame implements ActionListener
+{
    homepg()
    {
         setTitle("Home Page");
