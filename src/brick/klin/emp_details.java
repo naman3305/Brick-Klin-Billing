@@ -3,19 +3,22 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
 
-public class emp_details extends JFrame implements ActionListener{
+public class emp_details extends JFrame implements ActionListener
+{
  
     JTable t1;
     JButton b1;
     String x[] = {"Name","Cust_Id","Address","Email","Phone"};
     String y[][] = new String[20][5];
     int i=0, j=0;
-    emp_details(){
+    emp_details()
+    {
         super("Employee Details");
         setSize(1200,650);
         setLocation(200,200);
         
-        try{
+        try
+        {
             conn c1  = new conn();
             String s1 = "select * from emp";
             ResultSet rs  = c1.s.executeQuery(s1);
@@ -30,7 +33,9 @@ public class emp_details extends JFrame implements ActionListener{
             }
             t1 = new JTable(y,x);
             
-        }catch(Exception e){
+        }
+        catch(Exception e)
+        {
             e.printStackTrace();
         }
         
