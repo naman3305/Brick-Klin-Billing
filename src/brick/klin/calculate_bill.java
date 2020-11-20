@@ -4,7 +4,8 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
 
-public class calculate_bill extends JFrame implements ActionListener{
+public class calculate_bill extends JFrame implements ActionListener
+{
     JLabel l1,l2,l3,l4,l5,l6,l7;
     JButton b1,b2;
     JTextField t1,t2,t3,t4,t5;
