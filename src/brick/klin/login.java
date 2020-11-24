@@ -3,7 +3,8 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
 
-public class login extends JFrame implements ActionListener{
+public class login extends JFrame implements ActionListener
+{
 JLabel l1,l2,l3;
 JButton b1,b2;
 JTextField t1;
@@ -78,7 +79,9 @@ JPanel p4,p2,p3;
                new homepg().setVisible(true);
                 this.setVisible(false);
                 
-            }else{
+            }
+            else
+            {
                 JOptionPane.showMessageDialog(null, "Incorrect username or password");
                 t1.setText("");
                 p1.setText("");
@@ -98,7 +101,8 @@ JPanel p4,p2,p3;
        }
     }
     
-    public static void main(String[] args){
+    public static void main(String[] args)
+    {
         new login().setVisible(true);
     }
 
