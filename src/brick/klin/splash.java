@@ -2,8 +2,10 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class splash {
-    public static void main(String[] args){
+public class splash
+{
+    public static void main(String[] args)
+    {
         fframe f1 = new fframe();
         f1.setVisible(true);
         int i;
@@ -18,9 +20,11 @@ public class splash {
         
     }
 }
-class fframe extends JFrame implements Runnable{
+class fframe extends JFrame implements Runnable
+{
     Thread t1;
-    fframe(){
+    fframe()
+    {
         super("Brick Klin Billing System");
         setLayout(new FlowLayout());
         ImageIcon ic1=new ImageIcon("C:\\Users\\hp\\Documents\\NetBeansProjects\\Brick Klin\\src\\icons\\sp.jpg");
@@ -33,14 +37,18 @@ class fframe extends JFrame implements Runnable{
         t1 = new Thread(this);
         t1.start();
     }
-    public void run(){
-        try{
+    public void run()
+    {
+        try
+        {
             Thread.sleep(7000);
             this.setVisible(false);
             
             login l = new login();
             l.setVisible(true);
-        }catch(Exception e){
+        }
+        catch(Exception e)
+        {
             e.printStackTrace();
         }
     }
