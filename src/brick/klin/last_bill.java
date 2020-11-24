@@ -3,13 +3,15 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
 
-public class last_bill extends JFrame implements ActionListener{
+public class last_bill extends JFrame implements ActionListener
+{
     JLabel l1;
     JTextArea t1;
     JButton b1;
     JTextField c1;
     JPanel p1;
-    last_bill(){
+    last_bill()
+    {
         setSize(500,900);
         setLayout(new BorderLayout());
         
@@ -37,8 +39,10 @@ public class last_bill extends JFrame implements ActionListener{
         setLocation(350,40);
     }
     @Override
-    public void actionPerformed(ActionEvent ae){
-        try{
+    public void actionPerformed(ActionEvent ae)
+    {
+        try
+        {
             conn c = new conn();
 
             ResultSet rs = c.s.executeQuery("select * from customer where cust_id="+c1.getText());
@@ -57,7 +61,8 @@ public class last_bill extends JFrame implements ActionListener{
             
             rs = c.s.executeQuery("select * from bill where cust_id="+c1.getText());
             
-            while(rs.next()){
+            while(rs.next())
+            {
                 t1.append("       "+ rs.getString("date") + "           " +rs.getString("amount") + "\n");
             }
             
@@ -66,12 +71,14 @@ public class last_bill extends JFrame implements ActionListener{
             
             
             
-        }catch(Exception e){
+        }catch(Exception e)
+        {
             e.printStackTrace();
         }
     }
     
-    public static void main(String[] args){
+    public static void main(String[] args)
+    {
         new last_bill().setVisible(true);
     }
 }
