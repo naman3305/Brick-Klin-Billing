@@ -7,7 +7,7 @@ public class homepg extends JFrame implements ActionListener
 {
    homepg()
    {
-        setTitle("Home Page");
+        setTitle("Home Page ");
        setSize(1920,1030);
        
        ImageIcon i=new ImageIcon("C:\\Users\\hp\\Documents\\NetBeansProjects\\Brick Klin\\src\\icons\\klin.jpg");
