@@ -2,7 +2,8 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class new_customer extends JFrame implements ActionListener{
+public class new_customer extends JFrame implements ActionListener
+{
    JLabel l1,l2,l3,l4,l5,l6;
    JButton b1,b2;
    JTextField t1,t2,t3,t4,t5;
